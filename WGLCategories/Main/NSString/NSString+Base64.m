@@ -29,9 +29,11 @@
  *
  *  @return 普通字符串
  */
-+ (NSString *)textFromBase64String {
-    
-    NSData *data = [[NSData alloc] initWithBase64EncodedString:self options:0];
++ (NSString *)textFromBase64String:(NSString *)base64String {
+    if (!base64String) {
+        return nil;
+    }
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:base64String options:0];
     NSString *text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
     return text;

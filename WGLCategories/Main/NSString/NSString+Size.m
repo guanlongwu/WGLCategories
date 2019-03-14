@@ -25,11 +25,6 @@
                                           context:nil];
         inSize = CGSizeMake(ceilf(frame.size.width), ceilf(frame.size.height));
     }
-    else {
-        inSize = [self sizeWithFont:font
-                  constrainedToSize:size
-                      lineBreakMode:lineBreakMode];
-    }
     
     if (!isnormal(inSize.width)) {
         inSize.width = 0.0;

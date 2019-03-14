@@ -22,6 +22,6 @@
  *
  *  @return 普通字符串
  */
-+ (NSString *)textFromBase64String;
++ (NSString *)textFromBase64String:(NSString *)base64String;
 
 @end
