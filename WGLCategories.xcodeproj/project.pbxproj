@@ -45,6 +45,7 @@
 		0941FC8A223A5EFC0071B0E8 /* UIImage+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC84223A5EFC0071B0E8 /* UIImage+RoundCorner.m */; };
 		0941FC8B223A5EFC0071B0E8 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC85223A5EFC0071B0E8 /* UIImage+FixOrientation.m */; };
 		0941FC8C223A5EFC0071B0E8 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC86223A5EFC0071B0E8 /* UIImage+Resize.m */; };
+		0941FE12223BD4470071B0E8 /* NSData+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FE10223BD4470071B0E8 /* NSData+Encode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -137,6 +138,8 @@
 		0941FC84223A5EFC0071B0E8 /* UIImage+RoundCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundCorner.m"; sourceTree = "<group>"; };
 		0941FC85223A5EFC0071B0E8 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
 		0941FC86223A5EFC0071B0E8 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		0941FE10223BD4470071B0E8 /* NSData+Encode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encode.m"; sourceTree = "<group>"; };
+		0941FE11223BD4470071B0E8 /* NSData+Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encode.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +281,8 @@
 		0941FC23223A5ED60071B0E8 /* NSData */ = {
 			isa = PBXGroup;
 			children = (
+				0941FE11223BD4470071B0E8 /* NSData+Encode.h */,
+				0941FE10223BD4470071B0E8 /* NSData+Encode.m */,
 				0941FC24223A5ED60071B0E8 /* NSData+Compress.h */,
 				0941FC27223A5ED60071B0E8 /* NSData+Compress.m */,
 				0941FC25223A5ED60071B0E8 /* NSData+Encrypt.h */,
@@ -460,6 +465,7 @@
 				0941FC71223A5ED60071B0E8 /* NSString+URLParameter.m in Sources */,
 				0941FC8C223A5EFC0071B0E8 /* UIImage+Resize.m in Sources */,
 				0941FC8B223A5EFC0071B0E8 /* UIImage+FixOrientation.m in Sources */,
+				0941FE12223BD4470071B0E8 /* NSData+Encode.m in Sources */,
 				0941FC73223A5ED60071B0E8 /* NSString+Size.m in Sources */,
 				0941FC5D223A5ED60071B0E8 /* NSDictionary+Sort.m in Sources */,
 				0941FC79223A5ED60071B0E8 /* NSDate+Format.m in Sources */,
