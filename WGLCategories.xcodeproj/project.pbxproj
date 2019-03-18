@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0941003D223FA1270071B0E8 /* UIDevice+UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941003C223FA1270071B0E8 /* UIDevice+UserDefaults.m */; };
 		0941FBF3223A5D720071B0E8 /* WGLCategories.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0941FBF0223A5D720071B0E8 /* WGLCategories.h */; };
 		0941FC5B223A5ED60071B0E8 /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC0B223A5ED60071B0E8 /* NSDictionary+JSON.m */; };
 		0941FC5C223A5ED60071B0E8 /* NSDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC0C223A5ED60071B0E8 /* NSDictionary+Safe.m */; };
@@ -62,6 +63,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0941003B223FA1270071B0E8 /* UIDevice+UserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UserDefaults.h"; sourceTree = "<group>"; };
+		0941003C223FA1270071B0E8 /* UIDevice+UserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+UserDefaults.m"; sourceTree = "<group>"; };
 		0941FBED223A5D720071B0E8 /* libWGLCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWGLCategories.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0941FBF0223A5D720071B0E8 /* WGLCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGLCategories.h; sourceTree = "<group>"; };
 		0941FC08223A5ED60071B0E8 /* NSDictionary+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSON.h"; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 			children = (
 				0941FC2B223A5ED60071B0E8 /* UIDevice+DeviceInfo.h */,
 				0941FC2F223A5ED60071B0E8 /* UIDevice+DeviceInfo.m */,
+				0941003B223FA1270071B0E8 /* UIDevice+UserDefaults.h */,
+				0941003C223FA1270071B0E8 /* UIDevice+UserDefaults.m */,
 				0941FC2C223A5ED60071B0E8 /* UIDevice+CPU.h */,
 				0941FC30223A5ED60071B0E8 /* UIDevice+CPU.m */,
 				0941FC31223A5ED60071B0E8 /* UIDevice+NetworkInfo.h */,
@@ -459,6 +464,7 @@
 				0941FC6C223A5ED60071B0E8 /* NSString+Hash.m in Sources */,
 				0941FC61223A5ED60071B0E8 /* UIColor+Convertor.m in Sources */,
 				0941FC70223A5ED60071B0E8 /* NSString+URLEncode.m in Sources */,
+				0941003D223FA1270071B0E8 /* UIDevice+UserDefaults.m in Sources */,
 				0941FC72223A5ED60071B0E8 /* NSString+Number.m in Sources */,
 				0941FC5E223A5ED60071B0E8 /* UIScrollView+Extensions.m in Sources */,
 				0941FC65223A5ED60071B0E8 /* NSData+Hash.m in Sources */,
