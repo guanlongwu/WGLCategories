@@ -8,7 +8,6 @@
 
 #import "NSData+Compress.h"
 #include <zlib.h>
-#import <SSZipArchive/SSZipArchive.h>
 
 @implementation NSData (Compress)
 
@@ -173,52 +172,6 @@
     
     [compressed setLength:strm.total_out];
     return [NSData dataWithData:compressed];
-}
-
-/**
- 解压文件到指定的路径
- 
- @param filePath 将要解压文件的全路径
- @param destinationPath 解压目标路径
- @param fileName 解压文件名
- @return 是否解压完成
- */
-- (BOOL)unzipWithFilePath:(NSString *)filePath
-          destinationPath:(NSString *)destinationPath
-            unzipFileName:(NSString *)fileName {
-    __block BOOL unzipSucceed = NO;
-    NSString *unzipPath = [destinationPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@%@", fileName, @"-unzip"]];
-    NSString *unzipCompletePath = [destinationPath stringByAppendingPathComponent:fileName];
-    
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if (![fileManager fileExistsAtPath:destinationPath]) {
-       NSError *error = nil;
-       [fileManager createDirectoryAtPath:destinationPath withIntermediateDirectories:YES attributes:nil error:&error];
-       if (error) {
-           unzipSucceed = NO;
-           return unzipSucceed;
-       }
-    }
-    
-    [SSZipArchive unzipFileAtPath:filePath toDestination:unzipPath progressHandler:^(NSString * _Nonnull entry, unz_file_info zipInfo, long entryNumber, long total) {
-    } completionHandler:^(NSString * _Nonnull path, BOOL succeeded, NSError * _Nullable error) {
-        if (!succeeded) {
-            [[NSFileManager defaultManager] removeItemAtPath:unzipPath
-                                                       error:nil];
-            unzipSucceed = succeeded;
-        } else {
-            NSError * error = nil;
-            [[NSFileManager defaultManager] moveItemAtPath:unzipPath
-                                                    toPath:unzipCompletePath
-                                                     error:&error];
-            if (error) {
-                unzipSucceed = NO;
-            } else {
-                unzipSucceed = YES;
-            }
-            
-        }
-    }];
 }
 
 @end
