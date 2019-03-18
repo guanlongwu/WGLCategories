@@ -8,6 +8,7 @@
 
 #import "NSData+Compress.h"
 #include <zlib.h>
+#import <SSZipArchive/SSZipArchive.h>
 
 @implementation NSData (Compress)
 
@@ -174,4 +175,74 @@
     return [NSData dataWithData:compressed];
 }
 
+/**
+ 解压文件到指定的路径
+ 
+ @param filePath 将要解压文件的全路径
+ @param destinationPath 解压目标路径
+ @param fileName 解压文件名
+ @return 是否解压完成
+ */
+- (BOOL)unzipWithFilePath:(NSString *)filePath
+          destinationPath:(NSString *)destinationPath
+            unzipFileName:(NSString *)fileName {
+    __block BOOL unzipSucceed = NO;
+    NSString *unzipPath = [destinationPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@%@", fileName, @"-unzip"]];
+    NSString *unzipCompletePath = [destinationPath stringByAppendingPathComponent:fileName];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if (![fileManager fileExistsAtPath:destinationPath]) {
+       NSError *error = nil;
+       [fileManager createDirectoryAtPath:destinationPath withIntermediateDirectories:YES attributes:nil error:&error];
+       if (error) {
+           unzipSucceed = NO;
+           return unzipSucceed;
+       }
+    }
+    
+    [SSZipArchive unzipFileAtPath:filePath toDestination:unzipPath progressHandler:^(NSString * _Nonnull entry, unz_file_info zipInfo, long entryNumber, long total) {
+    } completionHandler:^(NSString * _Nonnull path, BOOL succeeded, NSError * _Nullable error) {
+        if (!succeeded) {
+            [[NSFileManager defaultManager] removeItemAtPath:unzipPath
+                                                       error:nil];
+            unzipSucceed = succeeded;
+        } else {
+            NSError * error = nil;
+            [[NSFileManager defaultManager] moveItemAtPath:unzipPath
+                                                    toPath:unzipCompletePath
+                                                     error:&error];
+            if (error) {
+                unzipSucceed = NO;
+            } else {
+                unzipSucceed = YES;
+            }
+            
+        }
+    }];
+}
+
 @end
+
+/**
+ 知识补充
+ 几种压缩：gzip、zip、zlib和7z
+ 
+ zip    -> *.zip
+ gzip   -> *.tar.gz / *.tgz
+ 
+ 1、gzip主要是压缩单个文件，设计目标是处理单个的文件；
+ 压缩包后缀都是 *.tar.gz 或 *.tgz（也就是先用tar把多个文件打包成单个文件，再用gzip压缩的结果）。
+ 
+ 2、gzip和zlib的区别：
+ gzip在压缩文件中的数据时，使用的就是zlib；
+ 为了保存与文件属性有关的信息，gzip需要在压缩文件（*.gz）中保存更多的头信息内容，而zlib不用考虑这一点。
+ 
+ 3、zip是压缩多个文件，适用于压缩多个文件的格式；
+ zip只是一种数据结构，跟rar同类型。
+ zip文件还要进一步包含文件目录结构的信息，比gzip的头信息更多。
+ 
+ 4、用gzip压缩的需要使用gunzip解压，使用zip压缩的，需要使用unzip解压，压缩方式的算法有区别的
+ 
+ 5、7z 是一种新的压缩格式，它拥有目前最高的压缩比；
+ 7z 已公开了结构编辑功能，所以它可以支持任何一种新的压缩算法。
+ */
