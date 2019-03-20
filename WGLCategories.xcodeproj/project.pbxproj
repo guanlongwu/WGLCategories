@@ -47,6 +47,7 @@
 		0941FC8B223A5EFC0071B0E8 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC85223A5EFC0071B0E8 /* UIImage+FixOrientation.m */; };
 		0941FC8C223A5EFC0071B0E8 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC86223A5EFC0071B0E8 /* UIImage+Resize.m */; };
 		0941FE12223BD4470071B0E8 /* NSData+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FE10223BD4470071B0E8 /* NSData+Encode.m */; };
+		09E4B6812242371B00A6E8B3 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E4B6802242371B00A6E8B3 /* UIView+Animation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -143,6 +144,8 @@
 		0941FC86223A5EFC0071B0E8 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		0941FE10223BD4470071B0E8 /* NSData+Encode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encode.m"; sourceTree = "<group>"; };
 		0941FE11223BD4470071B0E8 /* NSData+Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encode.h"; sourceTree = "<group>"; };
+		09E4B67F2242371B00A6E8B3 /* UIView+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
+		09E4B6802242371B00A6E8B3 /* UIView+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +262,8 @@
 			children = (
 				0941FC1C223A5ED60071B0E8 /* UIView+Extensions.h */,
 				0941FC1B223A5ED60071B0E8 /* UIView+Extensions.m */,
+				09E4B67F2242371B00A6E8B3 /* UIView+Animation.h */,
+				09E4B6802242371B00A6E8B3 /* UIView+Animation.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 				0941FC60223A5ED60071B0E8 /* NSBundle+Extensions.m in Sources */,
 				0941FC69223A5ED60071B0E8 /* UIDevice+DiskMemory.m in Sources */,
 				0941FC78223A5ED60071B0E8 /* NSTimer+Block.m in Sources */,
+				09E4B6812242371B00A6E8B3 /* UIView+Animation.m in Sources */,
 				0941FC88223A5EFC0071B0E8 /* UIImage+Blur.m in Sources */,
 				0941FC8A223A5EFC0071B0E8 /* UIImage+RoundCorner.m in Sources */,
 				0941FC6F223A5ED60071B0E8 /* NSString+Dictionary.m in Sources */,
