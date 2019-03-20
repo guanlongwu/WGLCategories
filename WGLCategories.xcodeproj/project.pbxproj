@@ -48,6 +48,7 @@
 		0941FC8C223A5EFC0071B0E8 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC86223A5EFC0071B0E8 /* UIImage+Resize.m */; };
 		0941FE12223BD4470071B0E8 /* NSData+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FE10223BD4470071B0E8 /* NSData+Encode.m */; };
 		09E4B6812242371B00A6E8B3 /* UIView+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E4B6802242371B00A6E8B3 /* UIView+Animation.m */; };
+		09E4B68422423B4200A6E8B3 /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E4B68322423B4200A6E8B3 /* UIView+RoundCorner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -146,6 +147,8 @@
 		0941FE11223BD4470071B0E8 /* NSData+Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encode.h"; sourceTree = "<group>"; };
 		09E4B67F2242371B00A6E8B3 /* UIView+Animation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Animation.h"; sourceTree = "<group>"; };
 		09E4B6802242371B00A6E8B3 /* UIView+Animation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Animation.m"; sourceTree = "<group>"; };
+		09E4B68222423B4200A6E8B3 /* UIView+RoundCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundCorner.h"; sourceTree = "<group>"; };
+		09E4B68322423B4200A6E8B3 /* UIView+RoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +265,8 @@
 			children = (
 				0941FC1C223A5ED60071B0E8 /* UIView+Extensions.h */,
 				0941FC1B223A5ED60071B0E8 /* UIView+Extensions.m */,
+				09E4B68222423B4200A6E8B3 /* UIView+RoundCorner.h */,
+				09E4B68322423B4200A6E8B3 /* UIView+RoundCorner.m */,
 				09E4B67F2242371B00A6E8B3 /* UIView+Animation.h */,
 				09E4B6802242371B00A6E8B3 /* UIView+Animation.m */,
 			);
@@ -466,6 +471,7 @@
 				0941FC67223A5ED60071B0E8 /* NSData+Encrypt.m in Sources */,
 				0941FC77223A5ED60071B0E8 /* NSArray+Safe.m in Sources */,
 				0941FC74223A5ED60071B0E8 /* UIControl+Block.m in Sources */,
+				09E4B68422423B4200A6E8B3 /* UIView+RoundCorner.m in Sources */,
 				0941FC6C223A5ED60071B0E8 /* NSString+Hash.m in Sources */,
 				0941FC61223A5ED60071B0E8 /* UIColor+Convertor.m in Sources */,
 				0941FC70223A5ED60071B0E8 /* NSString+URLEncode.m in Sources */,
