@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "WGLCategoriesMacro.h"
+
 #import "UIImage+Blur.h"
-#import "UIImage+Modify.h"
 #import "UIImage+Resize.h"
 #import "UIImage+FixOrientation.h"
 #import "UIImage+Transform.h"

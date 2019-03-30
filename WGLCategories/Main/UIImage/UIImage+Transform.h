@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 /// Convert degrees to radians.
-static inline CGFloat DegreesToRadians(CGFloat degrees) {
+static inline CGFloat WGLDegreesToRadians(CGFloat degrees) {
     return degrees * M_PI / 180;
 }
 
 /// Convert radians to degrees.
-static inline CGFloat RadiansToDegrees(CGFloat radians) {
+static inline CGFloat WGLRadiansToDegrees(CGFloat radians) {
     return radians * 180 / M_PI;
 }
 

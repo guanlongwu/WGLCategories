@@ -151,14 +151,14 @@ static uint64_t yy_net_counter_add(uint64_t counter, uint64_t bytes) {
     return counter;
 }
 
-static uint64_t yy_net_counter_get_by_type(yy_net_interface_counter *counter, YYNetworkTrafficType type) {
+static uint64_t yy_net_counter_get_by_type(yy_net_interface_counter *counter, WGLNetworkTrafficType type) {
     uint64_t bytes = 0;
-    if (type & YYNetworkTrafficTypeWWANSent) bytes += counter->pdp_ip_out;
-    if (type & YYNetworkTrafficTypeWWANReceived) bytes += counter->pdp_ip_in;
-    if (type & YYNetworkTrafficTypeWIFISent) bytes += counter->en_out;
-    if (type & YYNetworkTrafficTypeWIFIReceived) bytes += counter->en_in;
-    if (type & YYNetworkTrafficTypeAWDLSent) bytes += counter->awdl_out;
-    if (type & YYNetworkTrafficTypeAWDLReceived) bytes += counter->awdl_in;
+    if (type & WGLNetworkTrafficTypeWWANSent) bytes += counter->pdp_ip_out;
+    if (type & WGLNetworkTrafficTypeWWANReceived) bytes += counter->pdp_ip_in;
+    if (type & WGLNetworkTrafficTypeWIFISent) bytes += counter->en_out;
+    if (type & WGLNetworkTrafficTypeWIFIReceived) bytes += counter->en_in;
+    if (type & WGLNetworkTrafficTypeAWDLSent) bytes += counter->awdl_out;
+    if (type & WGLNetworkTrafficTypeAWDLReceived) bytes += counter->awdl_in;
     return bytes;
 }
 
@@ -213,7 +213,7 @@ static yy_net_interface_counter yy_get_net_interface_counter() {
     return counter;
 }
 
-- (uint64_t)getNetworkTrafficBytes:(YYNetworkTrafficType)types {
+- (uint64_t)getNetworkTrafficBytes:(WGLNetworkTrafficType)types {
     yy_net_interface_counter counter = yy_get_net_interface_counter();
     return yy_net_counter_get_by_type(&counter, types);
 }

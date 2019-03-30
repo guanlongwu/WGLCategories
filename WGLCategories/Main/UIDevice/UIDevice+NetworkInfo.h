@@ -37,21 +37,21 @@
  AWDL: Apple Wireless Direct Link (peer-to-peer connection).
  For exmaple: AirDrop, AirPlay, GameKit.
  */
-typedef NS_OPTIONS(NSUInteger, YYNetworkTrafficType) {
-    YYNetworkTrafficTypeWWANSent     = 1 << 0,
-    YYNetworkTrafficTypeWWANReceived = 1 << 1,
-    YYNetworkTrafficTypeWIFISent     = 1 << 2,
-    YYNetworkTrafficTypeWIFIReceived = 1 << 3,
-    YYNetworkTrafficTypeAWDLSent     = 1 << 4,
-    YYNetworkTrafficTypeAWDLReceived = 1 << 5,
+typedef NS_OPTIONS(NSUInteger, WGLNetworkTrafficType) {
+    WGLNetworkTrafficTypeWWANSent     = 1 << 0,
+    WGLNetworkTrafficTypeWWANReceived = 1 << 1,
+    WGLNetworkTrafficTypeWIFISent     = 1 << 2,
+    WGLNetworkTrafficTypeWIFIReceived = 1 << 3,
+    WGLNetworkTrafficTypeAWDLSent     = 1 << 4,
+    WGLNetworkTrafficTypeAWDLReceived = 1 << 5,
     
-    YYNetworkTrafficTypeWWAN = YYNetworkTrafficTypeWWANSent | YYNetworkTrafficTypeWWANReceived,
-    YYNetworkTrafficTypeWIFI = YYNetworkTrafficTypeWIFISent | YYNetworkTrafficTypeWIFIReceived,
-    YYNetworkTrafficTypeAWDL = YYNetworkTrafficTypeAWDLSent | YYNetworkTrafficTypeAWDLReceived,
+    WGLNetworkTrafficTypeWWAN = WGLNetworkTrafficTypeWWANSent | WGLNetworkTrafficTypeWWANReceived,
+    WGLNetworkTrafficTypeWIFI = WGLNetworkTrafficTypeWIFISent | WGLNetworkTrafficTypeWIFIReceived,
+    WGLNetworkTrafficTypeAWDL = WGLNetworkTrafficTypeAWDLSent | WGLNetworkTrafficTypeAWDLReceived,
     
-    YYNetworkTrafficTypeALL = YYNetworkTrafficTypeWWAN |
-    YYNetworkTrafficTypeWIFI |
-    YYNetworkTrafficTypeAWDL,
+    WGLNetworkTrafficTypeALL = WGLNetworkTrafficTypeWWAN |
+    WGLNetworkTrafficTypeWIFI |
+    WGLNetworkTrafficTypeAWDL,
 };
 
 /**
@@ -60,7 +60,7 @@ typedef NS_OPTIONS(NSUInteger, YYNetworkTrafficType) {
  @discussion This is a counter since the device's last boot time.
  Usage:
  
- uint64_t bytes = [[UIDevice currentDevice] getNetworkTrafficBytes:YYNetworkTrafficTypeALL];
+ uint64_t bytes = [[UIDevice currentDevice] getNetworkTrafficBytes:WGLNetworkTrafficTypeALL];
  NSTimeInterval time = CACurrentMediaTime();
  
  uint64_t bytesPerSecond = (bytes - _lastBytes) / (time - _lastTime);
@@ -71,7 +71,7 @@ typedef NS_OPTIONS(NSUInteger, YYNetworkTrafficType) {
  @param types traffic types
  @return bytes counter.
  */
-- (uint64_t)getNetworkTrafficBytes:(YYNetworkTrafficType)types;
+- (uint64_t)getNetworkTrafficBytes:(WGLNetworkTrafficType)types;
 
 
 @end

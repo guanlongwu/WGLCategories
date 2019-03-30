@@ -36,7 +36,7 @@
 
 + (instancetype)colorWithHexString:(NSString *)hexStr {
     CGFloat r, g, b, a;
-    if (hexStrToRGBA(hexStr, &r, &g, &b, &a)) {
+    if (WGLHexStrToRGBA(hexStr, &r, &g, &b, &a)) {
         return [UIColor colorWithRed:r green:g blue:b alpha:a];
     }
     return nil;
@@ -120,7 +120,7 @@
 
 #pragma mark - private
 
-static BOOL hexStrToRGBA(NSString *str,
+static BOOL WGLHexStrToRGBA(NSString *str,
                          CGFloat *r, CGFloat *g, CGFloat *b, CGFloat *a) {
     str = [[str stringByTrim] uppercaseString];
     if ([str hasPrefix:@"#"]) {

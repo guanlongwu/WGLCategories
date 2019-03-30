@@ -40,7 +40,6 @@
 		0941FC77223A5ED60071B0E8 /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC4E223A5ED60071B0E8 /* NSArray+Safe.m */; };
 		0941FC78223A5ED60071B0E8 /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC50223A5ED60071B0E8 /* NSTimer+Block.m */; };
 		0941FC79223A5ED60071B0E8 /* NSDate+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC54223A5ED60071B0E8 /* NSDate+Format.m */; };
-		0941FC87223A5EFC0071B0E8 /* UIImage+Modify.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC7B223A5EFC0071B0E8 /* UIImage+Modify.m */; };
 		0941FC88223A5EFC0071B0E8 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC7C223A5EFC0071B0E8 /* UIImage+Blur.m */; };
 		0941FC89223A5EFC0071B0E8 /* UIImage+Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC7D223A5EFC0071B0E8 /* UIImage+Transform.m */; };
 		0941FC8A223A5EFC0071B0E8 /* UIImage+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC84223A5EFC0071B0E8 /* UIImage+RoundCorner.m */; };
@@ -65,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0937909A224F4C9700CC557D /* WGLCategoriesMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGLCategoriesMacro.h; sourceTree = "<group>"; };
 		0941003B223FA1270071B0E8 /* UIDevice+UserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UserDefaults.h"; sourceTree = "<group>"; };
 		0941003C223FA1270071B0E8 /* UIDevice+UserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+UserDefaults.m"; sourceTree = "<group>"; };
 		0941FBED223A5D720071B0E8 /* libWGLCategories.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWGLCategories.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,13 +131,11 @@
 		0941FC51223A5ED60071B0E8 /* NSTimer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Block.h"; sourceTree = "<group>"; };
 		0941FC53223A5ED60071B0E8 /* NSDate+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Format.h"; sourceTree = "<group>"; };
 		0941FC54223A5ED60071B0E8 /* NSDate+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Format.m"; sourceTree = "<group>"; };
-		0941FC7B223A5EFC0071B0E8 /* UIImage+Modify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Modify.m"; sourceTree = "<group>"; };
 		0941FC7C223A5EFC0071B0E8 /* UIImage+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
 		0941FC7D223A5EFC0071B0E8 /* UIImage+Transform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Transform.m"; sourceTree = "<group>"; };
 		0941FC7E223A5EFC0071B0E8 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
 		0941FC7F223A5EFC0071B0E8 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		0941FC80223A5EFC0071B0E8 /* UIImage+RoundCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundCorner.h"; sourceTree = "<group>"; };
-		0941FC81223A5EFC0071B0E8 /* UIImage+Modify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Modify.h"; sourceTree = "<group>"; };
 		0941FC82223A5EFC0071B0E8 /* UIImage+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
 		0941FC83223A5EFC0071B0E8 /* UIImage+Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Transform.h"; sourceTree = "<group>"; };
 		0941FC84223A5EFC0071B0E8 /* UIImage+RoundCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundCorner.m"; sourceTree = "<group>"; };
@@ -182,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				0941FBF0223A5D720071B0E8 /* WGLCategories.h */,
+				0937909A224F4C9700CC557D /* WGLCategoriesMacro.h */,
 				0941FBF9223A5ED60071B0E8 /* Main */,
 			);
 			path = WGLCategories;
@@ -398,8 +397,6 @@
 			children = (
 				0941FC82223A5EFC0071B0E8 /* UIImage+Blur.h */,
 				0941FC7C223A5EFC0071B0E8 /* UIImage+Blur.m */,
-				0941FC81223A5EFC0071B0E8 /* UIImage+Modify.h */,
-				0941FC7B223A5EFC0071B0E8 /* UIImage+Modify.m */,
 				0941FC7F223A5EFC0071B0E8 /* UIImage+Resize.h */,
 				0941FC86223A5EFC0071B0E8 /* UIImage+Resize.m */,
 				0941FC83223A5EFC0071B0E8 /* UIImage+Transform.h */,
@@ -508,7 +505,6 @@
 				0941FC89223A5EFC0071B0E8 /* UIImage+Transform.m in Sources */,
 				0941FC63223A5ED60071B0E8 /* UIFont+Extensions.m in Sources */,
 				0941FC75223A5ED60071B0E8 /* UIGestureRecognizer+Block.m in Sources */,
-				0941FC87223A5EFC0071B0E8 /* UIImage+Modify.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

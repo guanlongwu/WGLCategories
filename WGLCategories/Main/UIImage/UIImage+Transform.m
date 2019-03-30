@@ -44,11 +44,11 @@
 }
 
 - (UIImage *)imageByRotateLeft90 {
-    return [self imageByRotate:DegreesToRadians(90) fitSize:YES];
+    return [self imageByRotate:WGLDegreesToRadians(90) fitSize:YES];
 }
 
 - (UIImage *)imageByRotateRight90 {
-    return [self imageByRotate:DegreesToRadians(-90) fitSize:YES];
+    return [self imageByRotate:WGLDegreesToRadians(-90) fitSize:YES];
 }
 
 - (UIImage *)imageByRotate180 {
