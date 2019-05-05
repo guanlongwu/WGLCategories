@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09139671227ED70C00F52D06 /* UIImage+MainBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 09139670227ED70C00F52D06 /* UIImage+MainBundle.m */; };
 		0941003D223FA1270071B0E8 /* UIDevice+UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941003C223FA1270071B0E8 /* UIDevice+UserDefaults.m */; };
 		0941FBF3223A5D720071B0E8 /* WGLCategories.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0941FBF0223A5D720071B0E8 /* WGLCategories.h */; };
 		0941FC5B223A5ED60071B0E8 /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0941FC0B223A5ED60071B0E8 /* NSDictionary+JSON.m */; };
@@ -64,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0913966F227ED70C00F52D06 /* UIImage+MainBundle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+MainBundle.h"; sourceTree = "<group>"; };
+		09139670227ED70C00F52D06 /* UIImage+MainBundle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MainBundle.m"; sourceTree = "<group>"; };
 		0937909A224F4C9700CC557D /* WGLCategoriesMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGLCategoriesMacro.h; sourceTree = "<group>"; };
 		0941003B223FA1270071B0E8 /* UIDevice+UserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UserDefaults.h"; sourceTree = "<group>"; };
 		0941003C223FA1270071B0E8 /* UIDevice+UserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+UserDefaults.m"; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 				0941FC85223A5EFC0071B0E8 /* UIImage+FixOrientation.m */,
 				0941FC80223A5EFC0071B0E8 /* UIImage+RoundCorner.h */,
 				0941FC84223A5EFC0071B0E8 /* UIImage+RoundCorner.m */,
+				0913966F227ED70C00F52D06 /* UIImage+MainBundle.h */,
+				09139670227ED70C00F52D06 /* UIImage+MainBundle.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -491,6 +496,7 @@
 				0941FC60223A5ED60071B0E8 /* NSBundle+Extensions.m in Sources */,
 				0941FC69223A5ED60071B0E8 /* UIDevice+DiskMemory.m in Sources */,
 				0941FC78223A5ED60071B0E8 /* NSTimer+Block.m in Sources */,
+				09139671227ED70C00F52D06 /* UIImage+MainBundle.m in Sources */,
 				09E4B6812242371B00A6E8B3 /* UIView+Animation.m in Sources */,
 				0941FC88223A5EFC0071B0E8 /* UIImage+Blur.m in Sources */,
 				0941FC8A223A5EFC0071B0E8 /* UIImage+RoundCorner.m in Sources */,

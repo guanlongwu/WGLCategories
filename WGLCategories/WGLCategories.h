@@ -15,6 +15,7 @@
 #import "UIImage+FixOrientation.h"
 #import "UIImage+Transform.h"
 #import "UIImage+RoundCorner.h"
+#import "UIImage+MainBundle.h"
 
 #import "NSString+URLParameter.h"
 #import "NSString+URLEncode.h"
